@@ -16,3 +16,5 @@ Go to `Settings->Pages` and set `Source` (under `Build and deployment`) to `Gith
 https://console.cloud.google.com/google/maps-apis/credentials?project=cellular-tide-195017
 
 https://console.cloud.google.com/billing/01E599-160257-FF4095?project=cellular-tide-195017
+
+https://console.cloud.google.com/home/dashboard?project=cellular-tide-195017&supportedpurview=project

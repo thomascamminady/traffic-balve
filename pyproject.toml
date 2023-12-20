@@ -7,6 +7,10 @@ authors = ["Thomas Camminady <0milieux_member@icloud.com>"]
 [tool.poetry.dependencies]
 python = ">=3.10,<3.12"
 googlemaps = "^4.10.0"
+polars = "^0.20.1"
+altair = "^5.2.0"
+pyarrow = "^14.0.2"
+vl-convert-python = "^1.2.0"
 
 
 [tool.poetry.group.dev.dependencies]
