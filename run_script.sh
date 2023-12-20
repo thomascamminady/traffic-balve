@@ -31,6 +31,7 @@ if [ $? -ne 0 ]; then
 
     # Attempt to commit again
     git commit -am "$GIT_COMMIT_MSG"
+    git push
 
     if [ $? -ne 0 ]; then
         echo "Git commit failed after retry. Check the pre-commit hooks or other issues." >> $LOG_FILE
