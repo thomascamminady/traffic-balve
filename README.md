@@ -13,4 +13,6 @@ Go to `Settings->Pages` and set `Source` (under `Build and deployment`) to `Gith
 
 ## Credits
 
-This package was created with [`cookiecutter`](https://github.com/audreyr/cookiecutter) and [`thomascamminady/cookiecutter-pypackage`](https://github.com/thomascamminady/cookiecutter-pypackage), a fork of [`audreyr/cookiecutter-pypackage`](https://github.com/audreyr/cookiecutter-pypackage).
+https://console.cloud.google.com/google/maps-apis/credentials?project=cellular-tide-195017
+
+https://console.cloud.google.com/billing/01E599-160257-FF4095?project=cellular-tide-195017
