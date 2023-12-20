@@ -21,7 +21,7 @@ $POETRY_PATH run python $SCRIPT_PATH >> $LOG_FILE 2>&1
 git add data/*.json
 
 # Commit the changes
-GIT_COMMIT_MSG="Adding data at date $CURRENT_TIMESTAMP"
+GIT_COMMIT_MSG="Adding data at date $CURRENT_TIMESTAMP."
 git commit -am "$GIT_COMMIT_MSG"
 
 # If commit fails, it might be due to pre-commit hooks making changes
@@ -35,8 +35,8 @@ if [ $? -ne 0 ]; then
     if [ $? -ne 0 ]; then
         echo "Git commit failed after retry. Check the pre-commit hooks or other issues." >> $LOG_FILE
     else
-        echo "Data committed successfully at $CURRENT_TIMESTAMP after retry" >> $LOG_FILE
+        echo "Data committed successfully at $CURRENT_TIMESTAMP after retry." >> $LOG_FILE
     fi
 else
-    echo "Data committed successfully at $CURRENT_TIMESTAMP" >> $LOG_FILE
+    echo "Data committed successfully at $CURRENT_TIMESTAMP." >> $LOG_FILE
 fi
