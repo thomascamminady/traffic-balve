@@ -45,4 +45,4 @@ if __name__ == "__main__":
         f"/Users/thomascamminady/Repos/traffic_balve/data/{departure_time}.json",
         "w",
     ) as file:
-        json.dump(matrix, file, indent=4)
+        json.dump(matrix, file)
