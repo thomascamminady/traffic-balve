@@ -2,6 +2,7 @@ import json
 from datetime import datetime
 
 import googlemaps
+import pytz
 
 
 def get_distance_matrix(
@@ -34,7 +35,9 @@ if __name__ == "__main__":
     schule = (51.327617, 7.852697)
 
     locations = [hoehle, krankenhaus, schule]
-    departure_time = datetime.now()
+
+    berlin_timezone = pytz.timezone("Europe/Berlin")
+    departure_time = datetime.now(berlin_timezone)
     matrix = get_distance_matrix(
         api_key=api_key,
         origins=locations,

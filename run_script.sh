@@ -10,6 +10,7 @@ LOG_FILE=/Users/thomascamminady/Repos/traffic_balve/cron.log
 # Navigate to the script's directory
 cd /Users/thomascamminady/Repos/traffic_balve
 
+echo "####################################################################################################################################" >> $LOG_FILE
 # Log the current date and time
 CURRENT_TIMESTAMP=$(date)
 echo "Running script at $CURRENT_TIMESTAMP" >> $LOG_FILE
