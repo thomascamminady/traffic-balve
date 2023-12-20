@@ -22,7 +22,7 @@ def format_distance_matrix(data):
 
 
 with open(
-    "/Users/thomascamminady/Repos/traffic_balve/data/2023-12-20 10:50:43.063641.json",
+    file="/Users/thomascamminady/Repos/traffic_balve/data/2023-12-20 10:50:43.063641.json",
 ) as f:
     distance_matrix_data = json.load(f)
 # Format the data
