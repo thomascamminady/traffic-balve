@@ -17,9 +17,9 @@ def create_df() -> pl.DataFrame:
         df_list.append(
             pl.from_dicts(formatted_matrix)
             .with_columns(
-                datetime=pl.lit(file.split("/")[-1].replace(".json", "")).str.strptime(
-                    format="%Y-%m-%d %H:%M:%S%.f", dtype=pl.Datetime
-                )
+                datetime=pl.lit(
+                    file.split("+")[0].split("/")[-1].replace(".json", "")
+                ).str.strptime(format="%Y-%m-%d %H:%M:%S%.f", dtype=pl.Datetime)
             )
             .filter(pl.col("from") != pl.col("to"))
             .rename(
