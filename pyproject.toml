@@ -12,6 +12,7 @@ altair = "^5.2.0"
 pyarrow = "^14.0.2"
 vl-convert-python = "^1.2.0"
 pytz = "^2023.3.post1"
+matplotlib = "^3.8.2"
 
 
 [tool.poetry.group.dev.dependencies]
