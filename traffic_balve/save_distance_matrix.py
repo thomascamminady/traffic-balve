@@ -38,6 +38,7 @@ if __name__ == "__main__":
     schule = (51.327617, 7.852697)
 
     locations = [hoehle, krankenhaus, schule]
+    names = ["hoehle", "krankenhaus", "schule"]
 
     berlin_timezone = pytz.timezone("Europe/Berlin")
     departure_time = datetime.now(berlin_timezone)
@@ -51,7 +52,7 @@ if __name__ == "__main__":
             departure_time=departure_time,
         )
         with open(
-            f"/Users/thomascamminady/Repos/traffic_balve/data/{origin}_{departure_time}.json",
+            f"/Users/thomascamminady/Repos/traffic_balve/data/{departure_time}_from_{names[i]}.json",
             "w",
         ) as file:
             json.dump(matrix, file)
