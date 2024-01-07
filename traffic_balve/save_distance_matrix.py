@@ -18,7 +18,7 @@ def get_distance_matrix(
 
     # Retrieve the distance matrix
     print(departure_time)
-    distance_matrix = gmaps.distance_matrix(
+    distance_matrix = gmaps.distance_matrix(  # type: ignore
         [origin],  # Single origin
         destinations,  # Multiple destinations
         mode="driving",
