@@ -7,7 +7,9 @@ from traffic_balve.parse import format_distance_matrix
 
 
 def create_df() -> pl.DataFrame:
-    files = glob.glob("/Users/thomascamminady/Repos/traffic_balve/data/*.json")
+    files = glob.glob(
+        "/Users/thomascamminady/Repos/traffic_balve/data/json/*.json"
+    )
     df_list = []
     for file in files:
         with open(file=file) as f:
@@ -38,7 +40,9 @@ def create_df() -> pl.DataFrame:
                     }
                 )
             )
-            .with_columns(from_to=pl.col("from") + pl.lit(" -> ") + pl.col("to"))
+            .with_columns(
+                from_to=pl.col("from") + pl.lit(" -> ") + pl.col("to")
+            )
         )
     df = pl.concat(df_list)
     return df

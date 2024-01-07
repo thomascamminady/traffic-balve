@@ -4,6 +4,8 @@ from datetime import datetime
 import googlemaps
 import pytz
 
+from traffic_balve.create_df import create_df
+
 
 def get_distance_matrix(
     api_key: str,
@@ -56,3 +58,5 @@ if __name__ == "__main__":
             "w",
         ) as file:
             json.dump(matrix, file)
+
+    create_df().sort("datetime").write_csv("data/summary.csv")
