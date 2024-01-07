@@ -7,7 +7,7 @@ import pytz
 
 def get_distance_matrix(
     api_key: str,
-    origins: list[tuple[float, float]],
+    origin: tuple[float, float],
     destinations: list[tuple[float, float]],
     departure_time,
 ) -> dict:
@@ -16,9 +16,9 @@ def get_distance_matrix(
 
     # Retrieve the distance matrix
     print(departure_time)
-    distance_matrix = gmaps.distance_matrix(  # type: ignore
-        origins,
-        destinations,
+    distance_matrix = gmaps.distance_matrix(
+        [origin],  # Single origin
+        destinations,  # Multiple destinations
         mode="driving",
         departure_time=departure_time,
     )
@@ -41,14 +41,17 @@ if __name__ == "__main__":
 
     berlin_timezone = pytz.timezone("Europe/Berlin")
     departure_time = datetime.now(berlin_timezone)
-    matrix = get_distance_matrix(
-        api_key=api_key,
-        origins=locations,
-        destinations=locations,
-        departure_time=departure_time,
-    )
-    with open(
-        f"/Users/thomascamminady/Repos/traffic_balve/data/{departure_time}.json",
-        "w",
-    ) as file:
-        json.dump(matrix, file)
+
+    for i, origin in enumerate(locations):
+        destinations = [loc for j, loc in enumerate(locations) if j != i]
+        matrix = get_distance_matrix(
+            api_key=api_key,
+            origin=origin,
+            destinations=destinations,
+            departure_time=departure_time,
+        )
+        with open(
+            f"/Users/thomascamminady/Repos/traffic_balve/data/{origin}_{departure_time}.json",
+            "w",
+        ) as file:
+            json.dump(matrix, file)
