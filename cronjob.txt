@@ -1,0 +1,1 @@
+*/5 5-21 * * * /Users/thomascamminady/Repos/traffic_balve/run_script.sh
