@@ -15,11 +15,12 @@ def get_distance_matrix(
     gmaps = googlemaps.Client(key=api_key)
 
     # Retrieve the distance matrix
+    print(departure_time)
     distance_matrix = gmaps.distance_matrix(  # type: ignore
         origins,
         destinations,
         mode="driving",
-        # departure_time=departure_time,
+        departure_time=departure_time,
     )
 
     return distance_matrix
