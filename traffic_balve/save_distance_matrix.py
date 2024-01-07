@@ -54,7 +54,7 @@ if __name__ == "__main__":
             departure_time=departure_time,
         )
         with open(
-            f"/Users/thomascamminady/Repos/traffic_balve/data/{departure_time}_from_{names[i]}.json",
+            f"/Users/thomascamminady/Repos/traffic_balve/data/json/{departure_time}_from_{names[i]}.json",
             "w",
         ) as file:
             json.dump(matrix, file)
