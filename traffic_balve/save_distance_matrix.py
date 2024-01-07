@@ -40,11 +40,11 @@ if __name__ == "__main__":
     locations = [hoehle, krankenhaus, schule]
     names = ["hoehle", "krankenhaus", "schule"]
 
-    berlin_timezone = pytz.timezone("Europe/Berlin")
-    departure_time = datetime.now(berlin_timezone)
-
     for i, origin in enumerate(locations):
         destinations = [loc for j, loc in enumerate(locations) if j != i]
+        berlin_timezone = pytz.timezone("Europe/Berlin")
+        departure_time = datetime.now(berlin_timezone)
+
         matrix = get_distance_matrix(
             api_key=api_key,
             origin=origin,
