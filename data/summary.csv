@@ -5639,3 +5639,9 @@ Krankenhaus,Höhle,1902,176,159,2024-01-07T12:30:02.563774000,Krankenhaus -> Hö
 Krankenhaus,Krumpaul,1560,145,131,2024-01-07T12:30:02.563774000,Krankenhaus -> Krumpaul
 Krumpaul,Höhle,2174,183,170,2024-01-07T12:30:02.702711000,Krumpaul -> Höhle
 Krumpaul,Krankenhaus,1539,147,133,2024-01-07T12:30:02.702711000,Krumpaul -> Krankenhaus
+Höhle,Krankenhaus,1905,183,164,2024-01-07T12:40:01.736164000,Höhle -> Krankenhaus
+Höhle,Krumpaul,2154,181,168,2024-01-07T12:40:01.736164000,Höhle -> Krumpaul
+Krankenhaus,Höhle,1902,176,164,2024-01-07T12:40:02.986967000,Krankenhaus -> Höhle
+Krankenhaus,Krumpaul,1560,145,132,2024-01-07T12:40:02.986967000,Krankenhaus -> Krumpaul
+Krumpaul,Höhle,2174,183,171,2024-01-07T12:40:03.206741000,Krumpaul -> Höhle
+Krumpaul,Krankenhaus,1539,147,129,2024-01-07T12:40:03.206741000,Krumpaul -> Krankenhaus
