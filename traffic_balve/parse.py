@@ -9,9 +9,9 @@ def format_distance_matrix(data) -> list:
                     "to": destination,
                     "distance": element["distance"]["value"],
                     "duration": element["duration"]["value"],
-                    "duration_in_traffic": element.get("duration_in_traffic", {}).get(
-                        "value", -99999
-                    ),
+                    "duration_in_traffic": element.get(
+                        "duration_in_traffic", {}
+                    ).get("value", -99999),
                 }
             )
     return formatted_data

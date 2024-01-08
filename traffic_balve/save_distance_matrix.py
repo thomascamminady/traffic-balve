@@ -29,7 +29,9 @@ def get_distance_matrix(
 
 if __name__ == "__main__":
     # Replace with your API key
-    with open(file="/Users/thomascamminady/Repos/traffic_balve/.apikey") as file:
+    with open(
+        file="/Users/thomascamminady/Repos/traffic_balve/.apikey"
+    ) as file:
         api_key = file.read().replace("\n", "")
 
     hoehle = (51.341209, 7.872643)
