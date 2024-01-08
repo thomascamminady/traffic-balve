@@ -17,7 +17,6 @@ def get_distance_matrix(
     gmaps = googlemaps.Client(key=api_key)
 
     # Retrieve the distance matrix
-    print(departure_time)
     distance_matrix = gmaps.distance_matrix(  # type: ignore
         [origin],  # Single origin
         destinations,  # Multiple destinations
@@ -30,9 +29,7 @@ def get_distance_matrix(
 
 if __name__ == "__main__":
     # Replace with your API key
-    with open(
-        file="/Users/thomascamminady/Repos/traffic_balve/.apikey"
-    ) as file:
+    with open(file="/Users/thomascamminady/Repos/traffic_balve/.apikey") as file:
         api_key = file.read().replace("\n", "")
 
     hoehle = (51.341209, 7.872643)
@@ -59,4 +56,4 @@ if __name__ == "__main__":
         ) as file:
             json.dump(matrix, file)
 
-    create_df().sort("datetime").write_csv("data/summary.csv")
+    create_df().sort("datetime", descending=True).write_csv("data/summary.csv")
