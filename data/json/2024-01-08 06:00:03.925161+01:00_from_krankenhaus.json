@@ -1,1 +1,3 @@
-{"destination_addresses": ["Helle 11, 58802 Balve, Germany", "Am Krumpaul 2, 58802 Balve, Germany"], "origin_addresses": ["Balve, Krankenhaus, 58802 Balve, Germany"], "rows": [{"elements": [{"distance": {"text": "1.9 km", "value": 1902}, "duration": {"text": "3 mins", "value": 176}, "duration_in_traffic": {"text": "3 mins", "value": 155}, "status": "OK"}, {"distance": {"text": "1.6 km", "value": 1560}, "duration": {"text": "2 mins", "value": 145}, "duration_in_traffic": {"text": "2 mins", "value": 130}, "status": "OK"}]}], "status": "OK"}
+version https://git-lfs.github.com/spec/v1
+oid sha256:de3942dc1ebf0afd974a43e556ffb9c7892197ba75e9b785275d42eb50a4f048
+size 545
