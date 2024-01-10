@@ -14,6 +14,9 @@ vl-convert-python = "^1.2.0"
 pytz = "^2023.3.post1"
 matplotlib = "^3.8.2"
 ruff = "^0.1.11"
+pyinstrument = "^4.6.1"
+hvplot = "^0.9.1"
+jupyter-bokeh = "^3.0.7"
 
 
 [tool.poetry.group.dev.dependencies]
