@@ -163,3 +163,5 @@ logs/
 .apikey
 INFO.md
 data/json/*.json
+# Commit the changes
+notebooks/ideas.ipynb
