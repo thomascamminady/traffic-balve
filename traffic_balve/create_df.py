@@ -4,12 +4,11 @@ import json
 import polars as pl
 
 from traffic_balve.parse import format_distance_matrix
+from traffic_balve.utils.config import Config
 
 
 def create_df() -> pl.DataFrame:
-    files = glob.glob(
-        "/Users/thomascamminady/Repos/traffic_balve/data/json/*.json"
-    )
+    files = glob.glob(f"{Config().foldername_root}/data/json/*.json")
     df_list = []
     for file in files:
         with open(file=file) as f:

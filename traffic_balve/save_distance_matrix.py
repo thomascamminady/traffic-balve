@@ -5,6 +5,7 @@ import googlemaps
 import pytz
 
 from traffic_balve.create_df import create_df
+from traffic_balve.utils.config import Config
 
 
 def get_distance_matrix(
@@ -29,9 +30,7 @@ def get_distance_matrix(
 
 if __name__ == "__main__":
     # Replace with your API key
-    with open(
-        file="/Users/thomascamminady/Repos/traffic_balve/.apikey"
-    ) as file:
+    with open(file=f"{Config().foldername_root}/.apikey") as file:
         api_key = file.read().replace("\n", "")
 
     hoehle = (51.341209, 7.872643)
@@ -53,7 +52,7 @@ if __name__ == "__main__":
             departure_time=departure_time,
         )
         with open(
-            f"/Users/thomascamminady/Repos/traffic_balve/data/json/{departure_time}_from_{names[i]}.json",
+            f"{Config().foldername_root}/data/json/{departure_time}_from_{names[i]}.json",
             "w",
         ) as file:
             json.dump(matrix, file)
