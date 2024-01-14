@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Define the path to the poetry executable and your script
-POETRY_PATH=/Users/thomascamminady/.local/bin/poetry
+POETRY_PATH=/Users/thomascamminadywahoo/.local/bin/poetry
 
 # Define the log file location
-LOG_FILE=/Users/thomascamminady/Repos/traffic_balve/cron.log
+LOG_FILE=/Users/thomascamminadywahoo/Repos/traffic_balve/cron.log
 
 # Navigate to the script's directory
-cd /Users/thomascamminady/Repos/traffic_balve
+cd /Users/thomascamminadywahoo/Repos/traffic_balve
 
 echo "####################################################################################################################################" >> $LOG_FILE
 # Log the current date and time
