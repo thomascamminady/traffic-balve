@@ -145,7 +145,7 @@ def create_graphic() -> None:
         )
         .resolve_scale(color="independent")  # type: ignore
     )
-    chart.save(f"""{Config().foldername_root}/chart.png""")
+    chart.save(f"""{Config().foldername_root}/chart.png""", scale_factor=3)
 
 
 if __name__ == "__main__":
