@@ -154,8 +154,8 @@ cython_debug/
 
 
 # Images
-*.png
-*.jpg
+# *.png
+# *.jpg
 
 *.pyc
 .venv/
