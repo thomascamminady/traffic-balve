@@ -48,7 +48,7 @@ def create_image() -> None:
             .with_columns(
                 today=pl.col("datetime").dt.date() == datetime.now().date(),
             )
-            .select("datetime", "delay_m", "from_to", "to")
+            .select("datetime", "delay_m", "to", "from")
         )
         .mark_line(point=False, clip=True)
         .encode(
@@ -68,7 +68,7 @@ def create_image() -> None:
                 alt.value(4),
                 alt.value(2),
             ),
-            tooltip=["from_to:N", "datetime:T", "delay_m:Q"],
+            tooltip=["from:N", "to:N", "datetime:T", "delay_m:Q"],
             row=alt.Row("from:N", spacing=50).title(None),
         )
         .configure_header(  # type: ignore
