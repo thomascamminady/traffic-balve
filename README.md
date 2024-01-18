@@ -2,7 +2,7 @@
 
 
 
-![Overview chart.](output/image2.png)
+![Overview chart.](output/overview.png)
 
 
 

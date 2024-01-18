@@ -79,4 +79,4 @@ def create_image() -> None:
             titleFontSize=20,
         )
         .properties(width=1000, height=300)
-    ).save("output/image2.png", scale_factor=4)
+    ).save("output/overview.png", scale_factor=4)
