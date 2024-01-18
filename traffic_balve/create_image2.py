@@ -48,7 +48,7 @@ def create_image() -> None:
             .with_columns(
                 today=pl.col("datetime").dt.date() == datetime.now().date(),
             )
-            .select("datetime", "delay_m", "from_to", "from")
+            .select("datetime", "delay_m", "from_to", "to")
         )
         .mark_line(point=False, clip=True)
         .encode(
