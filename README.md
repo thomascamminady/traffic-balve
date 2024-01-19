@@ -1,10 +1,4 @@
 # traffic-balve
 
 
-
-![Overview chart.](output/overview.png)
-
-
-
-
-Analyze the traffic in Balve using Google's Distance Matrix API.
+[https://thomascamminady.github.io/traffic-balve/](https://thomascamminady.github.io/traffic-balve/)
