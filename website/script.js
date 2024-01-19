@@ -9,12 +9,12 @@ fetch(dataUrl)
         const parsedData = d3.csvParse(data, d3.autoType);
 
         // Sort the fromValues in the specific order
-        const fromValues = Array.from(
-            new Set(parsedData.map((d) => d.from))
-        ).sort((a, b) => {
-            const order = ["Höhle", "Krankenhaus", "Krumpaul"];
-            return order.indexOf(a) - order.indexOf(b);
-        });
+        const fromValues = Array.from(new Set(parsedData.map((d) => d.from))).sort(
+            (a, b) => {
+                const order = ["Höhle", "Krankenhaus", "Krumpaul"];
+                return order.indexOf(a) - order.indexOf(b);
+            }
+        );
 
         fromValues.forEach((fromValue) => {
             createChart(
@@ -62,44 +62,46 @@ function createChart(data, fromValue) {
         .ticks(d3.timeHour.every(1))
         .tickFormat(d3.timeFormat("%H"));
 
-    svg
-        .append("g")
-        .attr("transform", `translate(0, ${height})`)
-        .call(xAxis);
+    svg.append("g").attr("transform", `translate(0, ${height})`).call(xAxis);
 
-   // Add Y axis with custom tick format
-// Define the maximum duration in seconds
-const maxDurationInSeconds = d3.max(data, (d) => +d.duration_in_traffic_s);
+    // Add Y axis with custom tick format
+    // Define the maximum duration in seconds
+    const maxDurationInSeconds = d3.max(data, (d) => +d.duration_in_traffic_s);
 
-// Calculate the maximum duration in minutes (rounded up) to determine the Y-axis domain
-const maxDurationInMinutes = Math.ceil(maxDurationInSeconds / 60);
+    // Calculate the maximum duration in minutes (rounded up) to determine the Y-axis domain
+    const maxDurationInMinutes = Math.ceil(maxDurationInSeconds / 60);
 
-// Create a domain that covers 30-second increments
-const yDomain = d3.range(0, (maxDurationInMinutes + 1) * 60, 30);
+    // Create a domain that covers 30-second increments
+    const yDomain = d3.range(0, (maxDurationInMinutes + 1) * 60, 30);
 
-// Define the Y-axis scale with the custom domain
-const y = d3
-    .scaleLinear()
-    .domain([0, yDomain[yDomain.length - 1]]) // Set the domain to cover 30-second increments
-    .range([height, 0]);
+    // Define the Y-axis scale with the custom domain
+    const y = d3
+        .scaleLinear()
+        .domain([0, yDomain[yDomain.length - 1]]) // Set the domain to cover 30-second increments
+        .range([height, 0]);
 
-// Add Y axis with custom tick format
-svg.append("g").call(
-    d3.axisLeft(y).tickValues(yDomain).tickFormat((d) => {
-        // Convert seconds to minutes and seconds
-        const minutes = Math.floor(d / 60);
-        const seconds = d % 60;
-        return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-    })
-);
+    // Add Y axis with custom tick format
+    svg.append("g").call(
+        d3
+            .axisLeft(y)
+            .tickValues(yDomain)
+            .tickFormat((d) => {
+                // Convert seconds to minutes and seconds
+                const minutes = Math.floor(d / 60);
+                const seconds = d % 60;
+                return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+            })
+    );
 
-
-
-    // Add grid lines
     svg
         .append("g")
         .attr("class", "grid")
-        .call(d3.axisLeft(y).tickSize(-width).tickFormat(""));
+        .call(
+            d3.axisLeft(y)
+                .tickValues(yDomain)
+                .tickSize(-width)
+                .tickFormat("")
+        );
     svg
         .append("g")
         .attr("class", "grid")
@@ -107,9 +109,17 @@ svg.append("g").call(
         .call(xAxis.tickSize(-height).tickFormat(""));
 
     // Color scale for different routes
-    const color = d3.scaleOrdinal()
-        .domain(["Krankenhaus -> Krumpaul", "Krumpaul -> Krankenhaus", "Krankenhaus -> Höhle", "Höhle -> Krankenhaus", "Krumpaul -> Höhle", "Höhle -> Krumpaul"])
-        .range(["orange", "blue", "green","blue","green","orange"]);
+    const color = d3
+        .scaleOrdinal()
+        .domain([
+            "Krankenhaus -> Krumpaul",
+            "Krumpaul -> Krankenhaus",
+            "Krankenhaus -> Höhle",
+            "Höhle -> Krankenhaus",
+            "Krumpaul -> Höhle",
+            "Höhle -> Krumpaul",
+        ])
+        .range(["orange", "blue", "green", "blue", "green", "orange"]);
 
     // Group the data
     const sumstat = d3.group(data, (d) => d.from_to + "|" + d.parsedDate);
@@ -129,9 +139,7 @@ svg.append("g").call(
             return color(route);
         })
         .attr("stroke-width", 1.5)
-        .attr("stroke-opacity", (d) =>
-            d[0].split("|")[1] === today ? 1 : 0.11
-        )
+        .attr("stroke-opacity", (d) => (d[0].split("|")[1] === today ? 1 : 0.11))
         .attr("d", function (d) {
             const line = d3
                 .line()
@@ -168,10 +176,7 @@ svg.append("g").call(
 
     svg
         .append("text")
-        .attr(
-            "transform",
-            `translate(${width - 12}, ${height + margin.bottom})`
-        )
+        .attr("transform", `translate(${width - 12}, ${height + margin.bottom})`)
         .style("text-anchor", "middle")
         .style("font-size", "15px")
         .text("Uhrzeit");
@@ -208,7 +213,7 @@ fetch(dataUrl)
             new Date(d.datetime).getTime()
         );
 
-        document.getElementById('update-time').textContent =
+        document.getElementById("update-time").textContent =
             "Zuletzt aktualisiert: " + formatTimestamp(newestTimestamp);
     })
     .catch((error) => console.error("Error fetching the data:", error));
@@ -216,10 +221,10 @@ fetch(dataUrl)
 function formatTimestamp(timestamp) {
     const date = new Date(timestamp);
     const year = date.getFullYear();
-    const month = String(date.getMonth() + 1).padStart(2, '0');
-    const day = String(date.getDate()).padStart(2, '0');
-    const hours = String(date.getHours()).padStart(2, '0');
-    const minutes = String(date.getMinutes()).padStart(2, '0');
-    const seconds = String(date.getSeconds()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const day = String(date.getDate()).padStart(2, "0");
+    const hours = String(date.getHours()).padStart(2, "0");
+    const minutes = String(date.getMinutes()).padStart(2, "0");
+    const seconds = String(date.getSeconds()).padStart(2, "0");
     return `${day}.${month}.${year} ${hours}:${minutes}:${seconds}`;
 }
