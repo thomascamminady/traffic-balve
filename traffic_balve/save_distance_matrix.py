@@ -5,7 +5,8 @@ import googlemaps
 import pytz
 
 from traffic_balve.create_df import create_df
-from traffic_balve.create_image2 import create_image
+
+# from traffic_balve.create_image2 import create_image
 from traffic_balve.utils.config import Config
 
 
@@ -59,4 +60,4 @@ if __name__ == "__main__":
             json.dump(matrix, file)
 
     create_df().sort("datetime", descending=True).write_csv("data/summary.csv")
-    create_image()
+    # create_image()
