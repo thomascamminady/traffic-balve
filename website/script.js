@@ -73,13 +73,18 @@ function createChart(data, fromValue) {
     // Calculate the maximum duration in minutes (rounded up) to determine the Y-axis domain
     const maxDurationInMinutes = Math.ceil(maxDurationInSeconds / 60);
 
+    const minDurationInSeconds = d3.min(data, (d) => +d.duration_in_traffic_s);
+
+    // Calculate the maximum duration in minutes (rounded up) to determine the Y-axis domain
+    const minDurationInMinutes = Math.floor(minDurationInSeconds / 60);
+
     // Create a domain that covers 30-second increments
-    const yDomain = d3.range(0, (maxDurationInMinutes + 1) * 60, 30);
+    const yDomain = d3.range((minDurationInMinutes ) * 60, (maxDurationInMinutes + 0.1) * 60, 30);
 
     // Define the Y-axis scale with the custom domain
     const y = d3
         .scaleLinear()
-        .domain([0, yDomain[yDomain.length - 1]]) // Set the domain to cover 30-second increments
+        .domain([yDomain[0], yDomain[yDomain.length - 1]]) // Set the domain to cover 30-second increments
         .range([height, 0]);
 
     // Add Y axis with custom tick format
@@ -164,9 +169,9 @@ function createChart(data, fromValue) {
     svg
         .append("text")
         .attr("x", 10)
-        .attr("y", 330)
+        .attr("y", 30)
         .attr("text-anchor", "right")
-        .style("font-size", "20px")
+        .style("font-size", "18px")
         .style("fill", "slategray")
         .text("Start: " + fromValue);
     // Add axis labels
