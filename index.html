@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Traffic Data Visualization</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+      /* Add CSS styling here */
+      body {
+        text-align: center; /* Center content horizontally */
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+      svg {
+        margin: 20px auto; /* Center SVG and add some margin */
+        display: block; /* Makes it easier to center */
+      }
+      .axis path,
+      .axis line {
+        fill: none;
+        stroke: lightgray; /* Updated to match grid lines */
+        stroke-opacity: 0.7; /* Slight opacity for grid-like appearance */
+        shape-rendering: crispEdges;
+      }
+
+      .line {
+        fill: none;
+        stroke-width: 1.5px;
+      }
+
+      .grid line {
+        stroke: lightgray;
+        stroke-opacity: 0.5;
+        shape-rendering: crispEdges;
+      }
+
+      .grid path {
+        stroke-width: 0;
+      }
+
+      text {
+        font-family: Arial, sans-serif; /* Changed to Arial */
+        fill: gray;
+      }
+
+      .label-background {
+        fill: white;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // URL of the CSV data
+      const dataUrl =
+        "https://raw.githubusercontent.com/thomascamminady/traffic-balve/main/data/summary.csv";
+
+      // Fetch the CSV data
+      fetch(dataUrl)
+        .then((response) => response.text())
+        .then((data) => {
+          const parsedData = d3.csvParse(data, d3.autoType);
+
+          // Sort the fromValues in the specific order
+          const fromValues = Array.from(
+            new Set(parsedData.map((d) => d.from))
+          ).sort((a, b) => {
+            const order = ["Höhle", "Krankenhaus", "Krumpaul"];
+            return order.indexOf(a) - order.indexOf(b);
+          });
+
+          fromValues.forEach((fromValue) => {
+            createChart(
+              parsedData.filter((d) => d.from === fromValue),
+              fromValue
+            );
+          });
+        })
+        .catch((error) => console.error("Error fetching the data:", error));
+
+      function createChart(data, fromValue) {
+        // Dimensions and margins of the graph
+        const margin = { top: 10, right: 30, bottom: 30, left: 60 },
+          width = 960 - margin.left - margin.right,
+          height = 400 - margin.top - margin.bottom;
+
+        // Append the svg object to the body of the page
+        const svg = d3
+          .select("body")
+          .append("svg")
+          .attr("width", width + margin.left + margin.right)
+          .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+          .attr("transform", `translate(${margin.left},${margin.top})`);
+
+        // Parse the date / time
+        const parseTime = d3.timeParse("%H:%M:%S");
+
+        // Format the data
+        data.forEach((d) => {
+          d.parsedTime = parseTime(d.datetime.split("T")[1].split(".")[0]);
+          d.parsedDate = d3.timeFormat("%Y-%m-%d")(new Date(d.datetime));
+        });
+
+        const today = d3.timeFormat("%Y-%m-%d")(new Date());
+
+        // Add X axis --> only time
+        const x = d3
+          .scaleTime()
+          .domain(d3.extent(data, (d) => d.parsedTime))
+          .range([0, width]);
+
+        const xAxis = d3
+          .axisBottom(x)
+          .ticks(d3.timeHour.every(1))
+          .tickFormat(d3.timeFormat("%H"));
+
+        svg
+          .append("g")
+          .attr("transform", `translate(0, ${height})`)
+          .call(xAxis);
+
+        // Add Y axis
+        const y = d3
+          .scaleLinear()
+          .domain([0, d3.max(data, (d) => +d.duration_in_traffic_s)])
+          .range([height, 0]);
+        svg.append("g").call(d3.axisLeft(y));
+
+        // Add grid lines
+        svg
+          .append("g")
+          .attr("class", "grid")
+          .call(d3.axisLeft(y).tickSize(-width).tickFormat(""));
+        svg
+          .append("g")
+          .attr("class", "grid")
+          .attr("transform", `translate(0,${height})`)
+          .call(d3.axisBottom(x).tickSize(-height).tickFormat(""));
+
+        // Color scale for different routes
+        const color = d3.scaleOrdinal(d3.schemeCategory10);
+
+        // Group the data
+        const sumstat = d3.group(data, (d) => d.from_to + "|" + d.parsedDate);
+
+        // Draw the lines
+        let todayLineEndPoints = {}; // Object to store the end points of today's lines
+        svg
+          .selectAll(".line")
+          .data(sumstat)
+          .join("path")
+          .attr("class", "line")
+          .attr("fill", "none")
+          .attr("stroke", function (d) {
+            const route = d[0].split("|")[0];
+            todayLineEndPoints[route] = { x: null, y: null };
+            return color(route);
+          })
+          .attr("stroke-width", 1.5)
+          .attr("stroke-opacity", (d) =>
+            d[0].split("|")[1] === today ? 1 : 0.11
+          )
+          .attr("d", function (d) {
+            const line = d3
+              .line()
+              .x((d) => x(d.parsedTime))
+              .y((d) => y(+d.duration_in_traffic_s));
+            if (d[0].split("|")[1] === today) {
+              const lastDataPoint = d[1][0];
+              todayLineEndPoints[d[0].split("|")[0]] = {
+                x: x(lastDataPoint.parsedTime),
+                y: y(lastDataPoint.duration_in_traffic_s),
+              };
+            }
+            return line(d[1]);
+          });
+
+        // Add title
+        svg
+          .append("text")
+          .attr("x", 10)
+          .attr("y", 330)
+          .attr("text-anchor", "right")
+          .style("font-size", "20px")
+          //    .style("text-decoration", "underline")
+          .text("Start: " + fromValue);
+        // Add axis labels
+        svg
+          .append("text")
+          .attr("transform", "rotate(-90)")
+          .attr("y", 0 - margin.left)
+          .attr("x", 0 - height / 2)
+          .attr("dy", "1em")
+          .style("text-anchor", "middle")
+          .style("font-size", "15px")
+
+          .text("Reisezeit [Sekunden]");
+
+        svg
+          .append("text")
+          .attr(
+            "transform",
+            `translate(${width - 12}, ${height + margin.bottom})`
+          )
+          .style("text-anchor", "middle")
+          .style("font-size", "15px")
+
+          .text("Uhrzeit");
+
+        const labelSpacing = 25; // Minimum spacing between labels
+        let lastY = -Infinity;
+        for (const [route, endPoint] of Object.entries(todayLineEndPoints)) {
+          if (endPoint.x !== null && endPoint.y !== null) {
+            // Add white background for the label
+            // Adjust for overlapping labels
+            if (endPoint.y - lastY < labelSpacing) {
+              endPoint.y = lastY + labelSpacing;
+            }
+            lastY = endPoint.y;
+
+            // Add label text
+            svg
+              .append("text")
+              .attr("x", endPoint.x + 15)
+              .attr("y", endPoint.y)
+              .style("font-size", "20px")
+              .style("fill", color(route))
+              .text("Ziel: " + route.split(" -> ")[1]);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
