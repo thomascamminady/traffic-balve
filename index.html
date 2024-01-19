@@ -135,7 +135,7 @@
           .append("g")
           .attr("class", "grid")
           .attr("transform", `translate(0,${height})`)
-          .call(d3.axisBottom(x).tickSize(-height).tickFormat(""));
+          .call(xAxis.tickSize(-height).tickFormat(""));
 
         // Color scale for different routes
         const color = d3.scaleOrdinal(d3.schemeCategory10);
