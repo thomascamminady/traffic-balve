@@ -129,7 +129,19 @@ function createChart(data, fromValue) {
             "Krumpaul -> Höhle",
             "Höhle -> Krumpaul",
         ])
-        .range(["brown", "blue", "green", "blue", "green", "brown"]);
+        .range([d3.color("purple"), "blue", "green", "blue", "green",d3.color("purple")]);
+
+
+    const colorfrom = d3
+        .scaleOrdinal()
+        .domain([
+            "Krumpaul",
+            "Krankenhaus",
+            "Höhle",
+
+        ])
+        .range([d3.color("purple"), "blue", "green"]);
+
 
     // Group the data
     const sumstat = d3.group(data, (d) => d.from_to + "|" + d.parsedDate);
@@ -172,7 +184,7 @@ function createChart(data, fromValue) {
         .attr("y", 30)
         .attr("text-anchor", "right")
         .style("font-size", "18px")
-        .style("fill", "slategray")
+        .style("fill", colorfrom(fromValue))
         .text("Start: " + fromValue);
     // Add axis labels
     svg
