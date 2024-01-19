@@ -26,6 +26,8 @@ fetch(dataUrl)
     .catch((error) => console.error("Error fetching the data:", error));
 
 function createChart(data, fromValue) {
+
+
     // Dimensions and margins of the graph
     const margin = { top: 10, right: 30, bottom: 30, left: 60 },
         width = 960 - margin.left - margin.right,
@@ -96,16 +98,19 @@ function createChart(data, fromValue) {
     svg
         .append("g")
         .attr("class", "grid")
+
         .call(
             d3.axisLeft(y)
                 .tickValues(yDomain)
                 .tickSize(-width)
                 .tickFormat("")
+
         );
     svg
         .append("g")
         .attr("class", "grid")
         .attr("transform", `translate(0,${height})`)
+
         .call(xAxis.tickSize(-height).tickFormat(""));
 
     // Color scale for different routes
@@ -119,7 +124,7 @@ function createChart(data, fromValue) {
             "Krumpaul -> Höhle",
             "Höhle -> Krumpaul",
         ])
-        .range(["orange", "blue", "green", "blue", "green", "orange"]);
+        .range(["brown", "blue", "green", "blue", "green", "brown"]);
 
     // Group the data
     const sumstat = d3.group(data, (d) => d.from_to + "|" + d.parsedDate);
@@ -139,7 +144,7 @@ function createChart(data, fromValue) {
             return color(route);
         })
         .attr("stroke-width", 1.5)
-        .attr("stroke-opacity", (d) => (d[0].split("|")[1] === today ? 1 : 0.11))
+        .attr("stroke-opacity", (d) => (d[0].split("|")[1] === today ? 1 : 0.07))
         .attr("d", function (d) {
             const line = d3
                 .line()
@@ -162,6 +167,7 @@ function createChart(data, fromValue) {
         .attr("y", 330)
         .attr("text-anchor", "right")
         .style("font-size", "20px")
+        .style("fill", "slategray")
         .text("Start: " + fromValue);
     // Add axis labels
     svg
@@ -172,6 +178,7 @@ function createChart(data, fromValue) {
         .attr("dy", "1em")
         .style("text-anchor", "middle")
         .style("font-size", "15px")
+        .style("fill", "slategray")
         .text("Reisezeit (min:sek)");
 
     svg
@@ -179,6 +186,7 @@ function createChart(data, fromValue) {
         .attr("transform", `translate(${width - 12}, ${height + margin.bottom})`)
         .style("text-anchor", "middle")
         .style("font-size", "15px")
+        .style("fill", "slategray")
         .text("Uhrzeit");
 
     const labelSpacing = 25; // Minimum spacing between labels
@@ -197,7 +205,7 @@ function createChart(data, fromValue) {
                 .append("text")
                 .attr("x", endPoint.x + 15)
                 .attr("y", endPoint.y)
-                .style("font-size", "20px")
+                .style("font-size", "18px")
                 .style("fill", color(route))
                 .text("Ziel: " + route.split(" -> ")[1]);
         }
