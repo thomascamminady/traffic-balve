@@ -5,6 +5,16 @@
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <style>
       /* Add CSS styling here */
+      body {
+            text-align: center; /* Center content horizontally */
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        svg {
+            margin: 20px auto; /* Center SVG and add some margin */
+            display: block; /* Makes it easier to center */
+        }
       .axis path,
       .axis line {
         fill: none;
@@ -91,10 +101,16 @@
           .scaleTime()
           .domain(d3.extent(data, (d) => d.parsedTime))
           .range([0, width]);
+
+        const xAxis = d3
+          .axisBottom(x)
+          .ticks(d3.timeHour.every(1))
+          .tickFormat(d3.timeFormat("%H"));
+
         svg
           .append("g")
           .attr("transform", `translate(0, ${height})`)
-          .call(d3.axisBottom(x));
+          .call(xAxis);
 
         // Add Y axis
         const y = d3
@@ -175,7 +191,7 @@
           .append("text")
           .attr(
             "transform",
-            `translate(${width - 20}, ${height + margin.bottom})`
+            `translate(${width - 15}, ${height + margin.bottom})`
           )
           .style("text-anchor", "middle")
           .text("Uhrzeit");
