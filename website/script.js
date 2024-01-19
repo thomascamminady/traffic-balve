@@ -67,12 +67,33 @@ function createChart(data, fromValue) {
         .attr("transform", `translate(0, ${height})`)
         .call(xAxis);
 
-    // Add Y axis
-    const y = d3
-        .scaleLinear()
-        .domain([0, d3.max(data, (d) => +d.duration_in_traffic_s)])
-        .range([height, 0]);
-    svg.append("g").call(d3.axisLeft(y));
+   // Add Y axis with custom tick format
+// Define the maximum duration in seconds
+const maxDurationInSeconds = d3.max(data, (d) => +d.duration_in_traffic_s);
+
+// Calculate the maximum duration in minutes (rounded up) to determine the Y-axis domain
+const maxDurationInMinutes = Math.ceil(maxDurationInSeconds / 60);
+
+// Create a domain that covers 30-second increments
+const yDomain = d3.range(0, (maxDurationInMinutes + 1) * 60, 30);
+
+// Define the Y-axis scale with the custom domain
+const y = d3
+    .scaleLinear()
+    .domain([0, yDomain[yDomain.length - 1]]) // Set the domain to cover 30-second increments
+    .range([height, 0]);
+
+// Add Y axis with custom tick format
+svg.append("g").call(
+    d3.axisLeft(y).tickValues(yDomain).tickFormat((d) => {
+        // Convert seconds to minutes and seconds
+        const minutes = Math.floor(d / 60);
+        const seconds = d % 60;
+        return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    })
+);
+
+
 
     // Add grid lines
     svg
@@ -143,7 +164,7 @@ function createChart(data, fromValue) {
         .attr("dy", "1em")
         .style("text-anchor", "middle")
         .style("font-size", "15px")
-        .text("Reisezeit [Sekunden]");
+        .text("Reisezeit (min:sek)");
 
     svg
         .append("text")
