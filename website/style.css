@@ -5,15 +5,19 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Roboto", sans-serif;
+    color: darkslategray;
+
+
 }
 
 #map {
     height: 400px;
     width: 960px;
-    margin: 20px auto; /* Center horizontally */
+    margin: 20px auto;
+    /* Center horizontally */
 
     margin-top: 20px;
-  }
+}
 
 svg {
     margin: 20px auto;
@@ -45,14 +49,19 @@ svg {
 
 .footer {
     text-align: left;
-    margin: 20px auto; /* Center horizontally */
-    width: 960px; /* Set the width */
-    padding: 0 20px; /* Add padding for left justification */
-    font-size: 14px;
+    margin: 20px auto;
+    /* Center horizontally */
+    width: 960px;
+    /* Set the width */
+    padding: 0 20px;
+    /* Add padding for left justification */
+    font-size: 16px;
+    color: darkslategray;
+
 }
 
 .footer a {
-    color: #0000ff;
+    color: #2626b1;
     /* Blue color for links */
     text-decoration: none;
 }
