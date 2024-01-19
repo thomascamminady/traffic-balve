@@ -6,7 +6,9 @@
   <title>Verkehrsmonitor Balve</title>
   <script src="https://d3js.org/d3.v6.min.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
-  <link rel="stylesheet" href="website/style.css"> <!-- Link to your CSS file -->
+  <link rel="stylesheet" href="website/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
 </head>
 
 <body>
@@ -15,11 +17,18 @@
   <div class="footer">
     <p>Erstellt von Thomas Camminady (<a href="https://www.camminady.dev">Website</a>, <a
         href="https://github.com/thomascamminady">Github</a>) unter Verwendung von Python, Polars für Analyse und D3.js
-      für Visualisierung. Webseite erstellt mit ChatGPT.</p>
-      <p>The Linien im Vordergrund repräsentieren den heutigen Tag. Die Linien im Hintergrund sind die Daten aus dem Jahr 2024.</p>
-    <p>Verkehrsdaten via Google Distance Matrix API. Zuletzt aktualisiert: <span id="update-time"></span></p>
+      für Visualisierung. The Linien im Vordergrund repräsentieren den heutigen Tag. Die Linien im Hintergrund sind die
+      Daten aus dem Jahr 2024. Webseite erstellt mit ChatGPT. Verkehrsdaten via Google Distance Matrix API. Zuletzt
+      aktualisiert: <span id="update-time"></span></p>
   </div>
+
   <script src="website/script_footer.js"></script>
+  <!-- Include Leaflet library -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <!-- Create a div element for the map -->
+  <div id="map"></div>
+  <script src="website/script_map.js"></script>
+
 </body>
 
 </html>

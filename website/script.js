@@ -86,7 +86,9 @@ function createChart(data, fromValue) {
         .call(xAxis.tickSize(-height).tickFormat(""));
 
     // Color scale for different routes
-    const color = d3.scaleOrdinal(d3.schemeCategory10);
+    const color = d3.scaleOrdinal()
+        .domain(["Krankenhaus -> Krumpaul", "Krumpaul -> Krankenhaus", "Krankenhaus -> Höhle", "Höhle -> Krankenhaus", "Krumpaul -> Höhle", "Höhle -> Krumpaul"])
+        .range(["orange", "blue", "green","blue","green","orange"]);
 
     // Group the data
     const sumstat = d3.group(data, (d) => d.from_to + "|" + d.parsedDate);
@@ -102,6 +104,7 @@ function createChart(data, fromValue) {
         .attr("stroke", function (d) {
             const route = d[0].split("|")[0];
             todayLineEndPoints[route] = { x: null, y: null };
+            // console.log(route)
             return color(route);
         })
         .attr("stroke-width", 1.5)
