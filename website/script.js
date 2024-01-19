@@ -31,7 +31,7 @@ function createChart(data, fromValue) {
     // Dimensions and margins of the graph
     const margin = { top: 10, right: 30, bottom: 30, left: 60 },
         width = 960 - margin.left - margin.right,
-        height = 330 - margin.top - margin.bottom;
+        height = 325 - margin.top - margin.bottom;
 
     // Append the svg object to the body of the page
     const svg = d3
