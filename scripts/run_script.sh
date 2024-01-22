@@ -23,5 +23,4 @@ CURRENT_TIMESTAMP=$(date)
 GIT_COMMIT_MSG="Adding data at date $CURRENT_TIMESTAMP."
 
 $POETRY_PATH run git commit -am "$GIT_COMMIT_MSG"
-git push
-/opt/homebrew/bin/git push
+git push >> $LOG_FILE 2>&1
