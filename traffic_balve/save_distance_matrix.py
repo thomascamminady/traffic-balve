@@ -66,8 +66,8 @@ if __name__ == "__main__":
     df.with_columns(
         pl.col("datetime").cast(pl.Datetime),
         pl.col("from", "to").cast(pl.Categorical),
-    ).with_columns(ideal_duration_s=pl.col("distance_m") / 50 * 3600).drop(
-        "from_to", "distance_m", "duration_s"
-    ).select(
+    ).with_columns(
+        ideal_duration_s=pl.col("distance_m") / 1000 / 50 * 3600
+    ).drop("from_to", "distance_m", "duration_s").select(
         "datetime", "from", "to", "duration_in_traffic_s", "ideal_duration_s"
     ).write_parquet("data/summary.parquet")
