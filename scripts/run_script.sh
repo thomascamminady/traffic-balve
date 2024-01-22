@@ -5,7 +5,7 @@ POETRY_PATH=/Users/thomascamminadywahoo/.local/bin/poetry
 SCRIPT_PATH=/Users/thomascamminadywahoo/Repos/traffic_balve/traffic_balve/save_distance_matrix.py
 
 # Define the log file location
-LOG_FILE=/Users/thomascamminadywahoo/Repos/traffic_balve/.cron.log
+LOG_FILE=/Users/thomascamminadywahoo/Repos/traffic_balve/scripts/.cron.log
 
 # Navigate to the script's directory
 cd /Users/thomascamminadywahoo/Repos/traffic_balve

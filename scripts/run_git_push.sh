@@ -1,7 +1,7 @@
 #!/bin/bash
 
 REPO_DIR="/Users/thomascamminadywahoo/Repos/traffic_balve"
-LOG_FILE="/Users/thomascamminadywahoo/Repos/traffic_balve/.gitpush.log"
+LOG_FILE="/Users/thomascamminadywahoo/Repos/traffic_balve/scripts/.gitpush.log"
 GIT_PATH="/opt/homebrew/bin/git"
 GIT_LFS_PATH="/opt/homebrew/bin/git-lfs"
 export PATH=$PATH:$GIT_LFS_PATH

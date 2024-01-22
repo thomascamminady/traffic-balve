@@ -4,7 +4,7 @@
 POETRY_PATH=/Users/thomascamminadywahoo/.local/bin/poetry
 
 # Define the log file location
-LOG_FILE=/Users/thomascamminadywahoo/Repos/traffic_balve/cron.log
+LOG_FILE=/Users/thomascamminadywahoo/Repos/traffic_balve/scripts/.cron.log
 
 # Navigate to the script's directory
 cd /Users/thomascamminadywahoo/Repos/traffic_balve
