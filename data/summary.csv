@@ -1,4 +1,10 @@
 from,to,distance_m,duration_s,duration_in_traffic_s,datetime,from_to
+Krumpaul,Höhle,2174,184,182,2024-01-23T06:30:01.736786000,Krumpaul -> Höhle
+Krumpaul,Krankenhaus,1539,147,144,2024-01-23T06:30:01.736786000,Krumpaul -> Krankenhaus
+Krankenhaus,Höhle,1902,176,168,2024-01-23T06:30:01.618655000,Krankenhaus -> Höhle
+Krankenhaus,Krumpaul,1560,145,137,2024-01-23T06:30:01.618655000,Krankenhaus -> Krumpaul
+Höhle,Krankenhaus,1905,183,180,2024-01-23T06:30:01.426713000,Höhle -> Krankenhaus
+Höhle,Krumpaul,2154,181,179,2024-01-23T06:30:01.426713000,Höhle -> Krumpaul
 Krumpaul,Höhle,2174,184,179,2024-01-23T06:20:02.155132000,Krumpaul -> Höhle
 Krumpaul,Krankenhaus,1539,147,140,2024-01-23T06:20:02.155132000,Krumpaul -> Krankenhaus
 Krankenhaus,Höhle,1902,176,167,2024-01-23T06:20:02.015693000,Krankenhaus -> Höhle
