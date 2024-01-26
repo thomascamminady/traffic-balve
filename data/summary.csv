@@ -1,4 +1,10 @@
 from,to,distance_m,duration_s,duration_in_traffic_s,datetime,from_to
+Krumpaul,Höhle,2174,184,207,2024-01-26T14:00:22.833039000,Krumpaul -> Höhle
+Krumpaul,Krankenhaus,1539,147,175,2024-01-26T14:00:22.833039000,Krumpaul -> Krankenhaus
+Krankenhaus,Höhle,1902,176,189,2024-01-26T14:00:22.706749000,Krankenhaus -> Höhle
+Krankenhaus,Krumpaul,1560,145,158,2024-01-26T14:00:22.706749000,Krankenhaus -> Krumpaul
+Höhle,Krankenhaus,1905,183,220,2024-01-26T14:00:22.373654000,Höhle -> Krankenhaus
+Höhle,Krumpaul,2154,181,207,2024-01-26T14:00:22.373654000,Höhle -> Krumpaul
 Krumpaul,Höhle,2174,184,208,2024-01-26T13:50:02.167235000,Krumpaul -> Höhle
 Krumpaul,Krankenhaus,1539,147,170,2024-01-26T13:50:02.167235000,Krumpaul -> Krankenhaus
 Krankenhaus,Höhle,1902,176,198,2024-01-26T13:50:02.057802000,Krankenhaus -> Höhle
@@ -10239,6 +10245,8 @@ Höhle,Krankenhaus,1905,182,190,2023-12-28T07:10:02.403725000,Höhle -> Krankenh
 Höhle,Krumpaul,2154,180,192,2023-12-28T07:10:02.403725000,Höhle -> Krumpaul
 Krankenhaus,Höhle,1902,174,189,2023-12-28T07:10:02.403725000,Krankenhaus -> Höhle
 Krankenhaus,Krumpaul,1560,143,160,2023-12-28T07:10:02.403725000,Krankenhaus -> Krumpaul
+Krumpaul,Höhle,2174,182,196,2023-12-28T07:10:02.403725000,Krumpaul -> Höhle
+Krumpaul,Krankenhaus,1539,145,157,2023-12-28T07:10:02.403725000,Krumpaul -> Krankenhaus
 Höhle,Krankenhaus,1905,182,185,2023-12-28T07:05:01.665588000,Höhle -> Krankenhaus
 Höhle,Krumpaul,2154,180,185,2023-12-28T07:05:01.665588000,Höhle -> Krumpaul
 Krankenhaus,Höhle,1902,174,177,2023-12-28T07:05:01.665588000,Krankenhaus -> Höhle
@@ -14731,7 +14739,5 @@ Höhle,Krankenhaus,1905,182,237,2023-12-20T10:50:43.063641000,Höhle -> Krankenh
 Höhle,Krumpaul,2154,180,221,2023-12-20T10:50:43.063641000,Höhle -> Krumpaul
 Krankenhaus,Höhle,1902,174,209,2023-12-20T10:50:43.063641000,Krankenhaus -> Höhle
 Krankenhaus,Krumpaul,1560,143,177,2023-12-20T10:50:43.063641000,Krankenhaus -> Krumpaul
-Krumpaul,Höhle,2174,182,209,2023-12-20T10:50:43.063641000,Krumpaul -> Höhle
-Krumpaul,Krankenhaus,1539,145,175,2023-12-20T10:50:43.063641000,Krumpaul -> Krankenhaus
 Krumpaul,Höhle,2174,182,209,2023-12-20T10:50:43.063641000,Krumpaul -> Höhle
 Krumpaul,Krankenhaus,1539,145,175,2023-12-20T10:50:43.063641000,Krumpaul -> Krankenhaus
