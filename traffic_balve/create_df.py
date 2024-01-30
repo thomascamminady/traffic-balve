@@ -44,7 +44,7 @@ def create_df() -> pl.DataFrame:
             )
             .with_columns(
                 route=pl.when(pl.col("from") < pl.col("to"))
-                .then(pl.col("from") + pl.lit(" -> ") + pl.col("to"))
+                .then(pl.col("from") + pl.lit(" <-> ") + pl.col("to"))
                 .otherwise(pl.col("to") + pl.lit(" <-> ") + pl.col("from"))
             )
         )
