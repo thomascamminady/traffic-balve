@@ -36,6 +36,9 @@ def create_df() -> pl.DataFrame:
                         "Am Krumpaul 2, 58802 Balve, Germany": "Krumpaul",
                         "Balve, Krankenhaus, 58802 Balve, Germany": "Krankenhaus",
                         "Helle 11, 58802 Balve, Germany": "Höhle",
+                        "51.3269218,7.8675944": "Krankenhaus",
+                        "51.3276141,7.8527007": "Krumpaul",
+                        "Helle 11, 58802 Balve-Helle, Germany": "Höhle",
                     }
                 )
             )
