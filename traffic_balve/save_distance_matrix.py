@@ -62,6 +62,7 @@ if __name__ == "__main__":
 
     df = create_df().sort("datetime", descending=True)
     df.write_csv("data/summary.csv")
+    df.to_pandas().to_csv("data/summary.csv.zip")
 
     df.with_columns(
         ideal_duration_s=pl.col("distance_m") / 1000 / 50 * 3600
@@ -70,6 +71,10 @@ if __name__ == "__main__":
         pl.col("from", "to").cast(pl.Categorical),
         pl.col("duration_in_traffic_s").cast(pl.UInt16),
         pl.col("ideal_duration_s").cast(pl.Float32),
-    ).drop("from_to", "distance_m", "duration_s").select(
+    ).drop(
+        "from_to", "distance_m", "duration_s"
+    ).select(
         "datetime", "from", "to", "duration_in_traffic_s", "ideal_duration_s"
-    ).write_parquet("data/summary.parquet")
+    ).write_parquet(
+        "data/summary.parquet"
+    )
