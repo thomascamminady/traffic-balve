@@ -1,58 +1,64 @@
 from,to,distance_m,duration_s,duration_in_traffic_s,datetime,from_to,route
-Krumpaul,"Helle 11, 58802 Balve-Helle, Germany",2174,184,172,2024-02-27T06:20:01.702818000,"Krumpaul → Helle 11, 58802 Balve-Helle, Germany","Helle 11, 58802 Balve-Helle, Germany ↔ Krumpaul"
+Krumpaul,Höhle,2174,184,176,2024-02-27T06:30:02.446326000,Krumpaul → Höhle,Höhle ↔ Krumpaul
+Krumpaul,Krankenhaus,1539,146,140,2024-02-27T06:30:02.446326000,Krumpaul → Krankenhaus,Krankenhaus ↔ Krumpaul
+Krankenhaus,Höhle,1902,176,167,2024-02-27T06:30:02.306301000,Krankenhaus → Höhle,Höhle ↔ Krankenhaus
+Krankenhaus,Krumpaul,1560,146,143,2024-02-27T06:30:02.306301000,Krankenhaus → Krumpaul,Krankenhaus ↔ Krumpaul
+Höhle,Krankenhaus,1905,182,177,2024-02-27T06:30:02.118058000,Höhle → Krankenhaus,Höhle ↔ Krankenhaus
+Höhle,Krumpaul,2154,181,180,2024-02-27T06:30:02.118058000,Höhle → Krumpaul,Höhle ↔ Krumpaul
+Krumpaul,Höhle,2174,184,172,2024-02-27T06:20:01.702818000,Krumpaul → Höhle,Höhle ↔ Krumpaul
 Krumpaul,Krankenhaus,1539,146,139,2024-02-27T06:20:01.702818000,Krumpaul → Krankenhaus,Krankenhaus ↔ Krumpaul
-Krankenhaus,"Helle 11, 58802 Balve-Helle, Germany",1902,176,159,2024-02-27T06:20:01.566181000,"Krankenhaus → Helle 11, 58802 Balve-Helle, Germany","Helle 11, 58802 Balve-Helle, Germany ↔ Krankenhaus"
+Krankenhaus,Höhle,1902,176,159,2024-02-27T06:20:01.566181000,Krankenhaus → Höhle,Höhle ↔ Krankenhaus
 Krankenhaus,Krumpaul,1560,146,136,2024-02-27T06:20:01.566181000,Krankenhaus → Krumpaul,Krankenhaus ↔ Krumpaul
-"Helle 11, 58802 Balve-Helle, Germany",Krankenhaus,1905,182,177,2024-02-27T06:20:01.362173000,"Helle 11, 58802 Balve-Helle, Germany → Krankenhaus","Helle 11, 58802 Balve-Helle, Germany ↔ Krankenhaus"
-"Helle 11, 58802 Balve-Helle, Germany",Krumpaul,2154,181,180,2024-02-27T06:20:01.362173000,"Helle 11, 58802 Balve-Helle, Germany → Krumpaul","Helle 11, 58802 Balve-Helle, Germany ↔ Krumpaul"
-Krumpaul,"Helle 11, 58802 Balve-Helle, Germany",2174,184,174,2024-02-27T06:10:02.323985000,"Krumpaul → Helle 11, 58802 Balve-Helle, Germany","Helle 11, 58802 Balve-Helle, Germany ↔ Krumpaul"
+Höhle,Krankenhaus,1905,182,177,2024-02-27T06:20:01.362173000,Höhle → Krankenhaus,Höhle ↔ Krankenhaus
+Höhle,Krumpaul,2154,181,180,2024-02-27T06:20:01.362173000,Höhle → Krumpaul,Höhle ↔ Krumpaul
+Krumpaul,Höhle,2174,184,174,2024-02-27T06:10:02.323985000,Krumpaul → Höhle,Höhle ↔ Krumpaul
 Krumpaul,Krankenhaus,1539,146,137,2024-02-27T06:10:02.323985000,Krumpaul → Krankenhaus,Krankenhaus ↔ Krumpaul
-Krankenhaus,"Helle 11, 58802 Balve-Helle, Germany",1902,176,161,2024-02-27T06:10:02.171183000,"Krankenhaus → Helle 11, 58802 Balve-Helle, Germany","Helle 11, 58802 Balve-Helle, Germany ↔ Krankenhaus"
+Krankenhaus,Höhle,1902,176,161,2024-02-27T06:10:02.171183000,Krankenhaus → Höhle,Höhle ↔ Krankenhaus
 Krankenhaus,Krumpaul,1560,146,133,2024-02-27T06:10:02.171183000,Krankenhaus → Krumpaul,Krankenhaus ↔ Krumpaul
-"Helle 11, 58802 Balve-Helle, Germany",Krankenhaus,1905,182,178,2024-02-27T06:10:01.955939000,"Helle 11, 58802 Balve-Helle, Germany → Krankenhaus","Helle 11, 58802 Balve-Helle, Germany ↔ Krankenhaus"
-"Helle 11, 58802 Balve-Helle, Germany",Krumpaul,2154,181,182,2024-02-27T06:10:01.955939000,"Helle 11, 58802 Balve-Helle, Germany → Krumpaul","Helle 11, 58802 Balve-Helle, Germany ↔ Krumpaul"
-Krumpaul,"Helle 11, 58802 Balve-Helle, Germany",2174,184,165,2024-02-27T06:00:01.364538000,"Krumpaul → Helle 11, 58802 Balve-Helle, Germany","Helle 11, 58802 Balve-Helle, Germany ↔ Krumpaul"
+Höhle,Krankenhaus,1905,182,178,2024-02-27T06:10:01.955939000,Höhle → Krankenhaus,Höhle ↔ Krankenhaus
+Höhle,Krumpaul,2154,181,182,2024-02-27T06:10:01.955939000,Höhle → Krumpaul,Höhle ↔ Krumpaul
+Krumpaul,Höhle,2174,184,165,2024-02-27T06:00:01.364538000,Krumpaul → Höhle,Höhle ↔ Krumpaul
 Krumpaul,Krankenhaus,1539,146,133,2024-02-27T06:00:01.364538000,Krumpaul → Krankenhaus,Krankenhaus ↔ Krumpaul
-Krankenhaus,"Helle 11, 58802 Balve-Helle, Germany",1902,176,156,2024-02-27T06:00:01.167151000,"Krankenhaus → Helle 11, 58802 Balve-Helle, Germany","Helle 11, 58802 Balve-Helle, Germany ↔ Krankenhaus"
+Krankenhaus,Höhle,1902,176,156,2024-02-27T06:00:01.167151000,Krankenhaus → Höhle,Höhle ↔ Krankenhaus
 Krankenhaus,Krumpaul,1560,146,137,2024-02-27T06:00:01.167151000,Krankenhaus → Krumpaul,Krankenhaus ↔ Krumpaul
-"Helle 11, 58802 Balve-Helle, Germany",Krankenhaus,1905,182,167,2024-02-27T06:00:00.984267000,"Helle 11, 58802 Balve-Helle, Germany → Krankenhaus","Helle 11, 58802 Balve-Helle, Germany ↔ Krankenhaus"
-"Helle 11, 58802 Balve-Helle, Germany",Krumpaul,2154,181,174,2024-02-27T06:00:00.984267000,"Helle 11, 58802 Balve-Helle, Germany → Krumpaul","Helle 11, 58802 Balve-Helle, Germany ↔ Krumpaul"
-Krumpaul,"Helle 11, 58802 Balve-Helle, Germany",2174,184,162,2024-02-27T05:50:01.769947000,"Krumpaul → Helle 11, 58802 Balve-Helle, Germany","Helle 11, 58802 Balve-Helle, Germany ↔ Krumpaul"
+Höhle,Krankenhaus,1905,182,167,2024-02-27T06:00:00.984267000,Höhle → Krankenhaus,Höhle ↔ Krankenhaus
+Höhle,Krumpaul,2154,181,174,2024-02-27T06:00:00.984267000,Höhle → Krumpaul,Höhle ↔ Krumpaul
+Krumpaul,Höhle,2174,184,162,2024-02-27T05:50:01.769947000,Krumpaul → Höhle,Höhle ↔ Krumpaul
 Krumpaul,Krankenhaus,1539,146,137,2024-02-27T05:50:01.769947000,Krumpaul → Krankenhaus,Krankenhaus ↔ Krumpaul
-Krankenhaus,"Helle 11, 58802 Balve-Helle, Germany",1902,176,151,2024-02-27T05:50:01.637814000,"Krankenhaus → Helle 11, 58802 Balve-Helle, Germany","Helle 11, 58802 Balve-Helle, Germany ↔ Krankenhaus"
+Krankenhaus,Höhle,1902,176,151,2024-02-27T05:50:01.637814000,Krankenhaus → Höhle,Höhle ↔ Krankenhaus
 Krankenhaus,Krumpaul,1560,146,130,2024-02-27T05:50:01.637814000,Krankenhaus → Krumpaul,Krankenhaus ↔ Krumpaul
-"Helle 11, 58802 Balve-Helle, Germany",Krankenhaus,1905,182,169,2024-02-27T05:50:01.453273000,"Helle 11, 58802 Balve-Helle, Germany → Krankenhaus","Helle 11, 58802 Balve-Helle, Germany ↔ Krankenhaus"
-"Helle 11, 58802 Balve-Helle, Germany",Krumpaul,2154,181,168,2024-02-27T05:50:01.453273000,"Helle 11, 58802 Balve-Helle, Germany → Krumpaul","Helle 11, 58802 Balve-Helle, Germany ↔ Krumpaul"
-Krumpaul,"Helle 11, 58802 Balve-Helle, Germany",2174,184,161,2024-02-27T05:40:02.229679000,"Krumpaul → Helle 11, 58802 Balve-Helle, Germany","Helle 11, 58802 Balve-Helle, Germany ↔ Krumpaul"
+Höhle,Krankenhaus,1905,182,169,2024-02-27T05:50:01.453273000,Höhle → Krankenhaus,Höhle ↔ Krankenhaus
+Höhle,Krumpaul,2154,181,168,2024-02-27T05:50:01.453273000,Höhle → Krumpaul,Höhle ↔ Krumpaul
+Krumpaul,Höhle,2174,184,161,2024-02-27T05:40:02.229679000,Krumpaul → Höhle,Höhle ↔ Krumpaul
 Krumpaul,Krankenhaus,1539,146,136,2024-02-27T05:40:02.229679000,Krumpaul → Krankenhaus,Krankenhaus ↔ Krumpaul
-Krankenhaus,"Helle 11, 58802 Balve-Helle, Germany",1902,176,153,2024-02-27T05:40:02.095094000,"Krankenhaus → Helle 11, 58802 Balve-Helle, Germany","Helle 11, 58802 Balve-Helle, Germany ↔ Krankenhaus"
+Krankenhaus,Höhle,1902,176,153,2024-02-27T05:40:02.095094000,Krankenhaus → Höhle,Höhle ↔ Krankenhaus
 Krankenhaus,Krumpaul,1560,146,131,2024-02-27T05:40:02.095094000,Krankenhaus → Krumpaul,Krankenhaus ↔ Krumpaul
-"Helle 11, 58802 Balve-Helle, Germany",Krankenhaus,1905,182,166,2024-02-27T05:40:01.899695000,"Helle 11, 58802 Balve-Helle, Germany → Krankenhaus","Helle 11, 58802 Balve-Helle, Germany ↔ Krankenhaus"
-"Helle 11, 58802 Balve-Helle, Germany",Krumpaul,2154,181,165,2024-02-27T05:40:01.899695000,"Helle 11, 58802 Balve-Helle, Germany → Krumpaul","Helle 11, 58802 Balve-Helle, Germany ↔ Krumpaul"
-Krumpaul,"Helle 11, 58802 Balve-Helle, Germany",2174,184,158,2024-02-27T05:30:02.177727000,"Krumpaul → Helle 11, 58802 Balve-Helle, Germany","Helle 11, 58802 Balve-Helle, Germany ↔ Krumpaul"
+Höhle,Krankenhaus,1905,182,166,2024-02-27T05:40:01.899695000,Höhle → Krankenhaus,Höhle ↔ Krankenhaus
+Höhle,Krumpaul,2154,181,165,2024-02-27T05:40:01.899695000,Höhle → Krumpaul,Höhle ↔ Krumpaul
+Krumpaul,Höhle,2174,184,158,2024-02-27T05:30:02.177727000,Krumpaul → Höhle,Höhle ↔ Krumpaul
 Krumpaul,Krankenhaus,1539,146,130,2024-02-27T05:30:02.177727000,Krumpaul → Krankenhaus,Krankenhaus ↔ Krumpaul
-Krankenhaus,"Helle 11, 58802 Balve-Helle, Germany",1902,176,150,2024-02-27T05:30:02.046744000,"Krankenhaus → Helle 11, 58802 Balve-Helle, Germany","Helle 11, 58802 Balve-Helle, Germany ↔ Krankenhaus"
+Krankenhaus,Höhle,1902,176,150,2024-02-27T05:30:02.046744000,Krankenhaus → Höhle,Höhle ↔ Krankenhaus
 Krankenhaus,Krumpaul,1560,146,129,2024-02-27T05:30:02.046744000,Krankenhaus → Krumpaul,Krankenhaus ↔ Krumpaul
-"Helle 11, 58802 Balve-Helle, Germany",Krankenhaus,1905,182,162,2024-02-27T05:30:01.854003000,"Helle 11, 58802 Balve-Helle, Germany → Krankenhaus","Helle 11, 58802 Balve-Helle, Germany ↔ Krankenhaus"
-"Helle 11, 58802 Balve-Helle, Germany",Krumpaul,2154,181,161,2024-02-27T05:30:01.854003000,"Helle 11, 58802 Balve-Helle, Germany → Krumpaul","Helle 11, 58802 Balve-Helle, Germany ↔ Krumpaul"
-Krumpaul,"Helle 11, 58802 Balve-Helle, Germany",2174,184,158,2024-02-27T05:20:02.049445000,"Krumpaul → Helle 11, 58802 Balve-Helle, Germany","Helle 11, 58802 Balve-Helle, Germany ↔ Krumpaul"
+Höhle,Krankenhaus,1905,182,162,2024-02-27T05:30:01.854003000,Höhle → Krankenhaus,Höhle ↔ Krankenhaus
+Höhle,Krumpaul,2154,181,161,2024-02-27T05:30:01.854003000,Höhle → Krumpaul,Höhle ↔ Krumpaul
+Krumpaul,Höhle,2174,184,158,2024-02-27T05:20:02.049445000,Krumpaul → Höhle,Höhle ↔ Krumpaul
 Krumpaul,Krankenhaus,1539,146,130,2024-02-27T05:20:02.049445000,Krumpaul → Krankenhaus,Krankenhaus ↔ Krumpaul
-Krankenhaus,"Helle 11, 58802 Balve-Helle, Germany",1902,176,156,2024-02-27T05:20:01.906876000,"Krankenhaus → Helle 11, 58802 Balve-Helle, Germany","Helle 11, 58802 Balve-Helle, Germany ↔ Krankenhaus"
+Krankenhaus,Höhle,1902,176,156,2024-02-27T05:20:01.906876000,Krankenhaus → Höhle,Höhle ↔ Krankenhaus
 Krankenhaus,Krumpaul,1560,145,134,2024-02-27T05:20:01.906876000,Krankenhaus → Krumpaul,Krankenhaus ↔ Krumpaul
-"Helle 11, 58802 Balve-Helle, Germany",Krankenhaus,1905,182,163,2024-02-27T05:20:01.708515000,"Helle 11, 58802 Balve-Helle, Germany → Krankenhaus","Helle 11, 58802 Balve-Helle, Germany ↔ Krankenhaus"
-"Helle 11, 58802 Balve-Helle, Germany",Krumpaul,2154,181,164,2024-02-27T05:20:01.708515000,"Helle 11, 58802 Balve-Helle, Germany → Krumpaul","Helle 11, 58802 Balve-Helle, Germany ↔ Krumpaul"
-Krumpaul,"Helle 11, 58802 Balve-Helle, Germany",2174,184,159,2024-02-27T05:10:01.859627000,"Krumpaul → Helle 11, 58802 Balve-Helle, Germany","Helle 11, 58802 Balve-Helle, Germany ↔ Krumpaul"
+Höhle,Krankenhaus,1905,182,163,2024-02-27T05:20:01.708515000,Höhle → Krankenhaus,Höhle ↔ Krankenhaus
+Höhle,Krumpaul,2154,181,164,2024-02-27T05:20:01.708515000,Höhle → Krumpaul,Höhle ↔ Krumpaul
+Krumpaul,Höhle,2174,184,159,2024-02-27T05:10:01.859627000,Krumpaul → Höhle,Höhle ↔ Krumpaul
 Krumpaul,Krankenhaus,1539,146,130,2024-02-27T05:10:01.859627000,Krumpaul → Krankenhaus,Krankenhaus ↔ Krumpaul
-Krankenhaus,"Helle 11, 58802 Balve-Helle, Germany",1902,176,147,2024-02-27T05:10:01.736706000,"Krankenhaus → Helle 11, 58802 Balve-Helle, Germany","Helle 11, 58802 Balve-Helle, Germany ↔ Krankenhaus"
+Krankenhaus,Höhle,1902,176,147,2024-02-27T05:10:01.736706000,Krankenhaus → Höhle,Höhle ↔ Krankenhaus
 Krankenhaus,Krumpaul,1560,146,134,2024-02-27T05:10:01.736706000,Krankenhaus → Krumpaul,Krankenhaus ↔ Krumpaul
-"Helle 11, 58802 Balve-Helle, Germany",Krankenhaus,1905,182,164,2024-02-27T05:10:01.578171000,"Helle 11, 58802 Balve-Helle, Germany → Krankenhaus","Helle 11, 58802 Balve-Helle, Germany ↔ Krankenhaus"
-"Helle 11, 58802 Balve-Helle, Germany",Krumpaul,2154,181,173,2024-02-27T05:10:01.578171000,"Helle 11, 58802 Balve-Helle, Germany → Krumpaul","Helle 11, 58802 Balve-Helle, Germany ↔ Krumpaul"
-Krumpaul,"Helle 11, 58802 Balve-Helle, Germany",2174,184,171,2024-02-27T05:00:02.842800000,"Krumpaul → Helle 11, 58802 Balve-Helle, Germany","Helle 11, 58802 Balve-Helle, Germany ↔ Krumpaul"
+Höhle,Krankenhaus,1905,182,164,2024-02-27T05:10:01.578171000,Höhle → Krankenhaus,Höhle ↔ Krankenhaus
+Höhle,Krumpaul,2154,181,173,2024-02-27T05:10:01.578171000,Höhle → Krumpaul,Höhle ↔ Krumpaul
+Krumpaul,Höhle,2174,184,171,2024-02-27T05:00:02.842800000,Krumpaul → Höhle,Höhle ↔ Krumpaul
 Krumpaul,Krankenhaus,1539,146,147,2024-02-27T05:00:02.842800000,Krumpaul → Krankenhaus,Krankenhaus ↔ Krumpaul
-Krankenhaus,"Helle 11, 58802 Balve-Helle, Germany",1902,176,149,2024-02-27T05:00:02.698967000,"Krankenhaus → Helle 11, 58802 Balve-Helle, Germany","Helle 11, 58802 Balve-Helle, Germany ↔ Krankenhaus"
+Krankenhaus,Höhle,1902,176,149,2024-02-27T05:00:02.698967000,Krankenhaus → Höhle,Höhle ↔ Krankenhaus
 Krankenhaus,Krumpaul,1560,146,119,2024-02-27T05:00:02.698967000,Krankenhaus → Krumpaul,Krankenhaus ↔ Krumpaul
-"Helle 11, 58802 Balve-Helle, Germany",Krankenhaus,1905,182,168,2024-02-27T05:00:02.491324000,"Helle 11, 58802 Balve-Helle, Germany → Krankenhaus","Helle 11, 58802 Balve-Helle, Germany ↔ Krankenhaus"
-"Helle 11, 58802 Balve-Helle, Germany",Krumpaul,2154,181,159,2024-02-27T05:00:02.491324000,"Helle 11, 58802 Balve-Helle, Germany → Krumpaul","Helle 11, 58802 Balve-Helle, Germany ↔ Krumpaul"
+Höhle,Krankenhaus,1905,182,168,2024-02-27T05:00:02.491324000,Höhle → Krankenhaus,Höhle ↔ Krankenhaus
+Höhle,Krumpaul,2154,181,159,2024-02-27T05:00:02.491324000,Höhle → Krumpaul,Höhle ↔ Krumpaul
 Krumpaul,Höhle,2174,184,162,2024-02-26T21:50:02.267928000,Krumpaul → Höhle,Höhle ↔ Krumpaul
 Krumpaul,Krankenhaus,1539,146,131,2024-02-26T21:50:02.267928000,Krumpaul → Krankenhaus,Krankenhaus ↔ Krumpaul
 Krankenhaus,Höhle,1902,175,144,2024-02-26T21:50:02.101941000,Krankenhaus → Höhle,Höhle ↔ Krankenhaus
@@ -6316,7 +6322,7 @@ Krumpaul,Krankenhaus,1539,147,143,2024-02-14T05:00:03.000371000,Krumpaul → Kra
 Krankenhaus,Höhle,1902,175,150,2024-02-14T05:00:02.861111000,Krankenhaus → Höhle,Höhle ↔ Krankenhaus
 Krankenhaus,Krumpaul,1560,144,127,2024-02-14T05:00:02.861111000,Krankenhaus → Krumpaul,Krankenhaus ↔ Krumpaul
 Höhle,Krankenhaus,1905,184,174,2024-02-14T05:00:02.158288000,Höhle → Krankenhaus,Höhle ↔ Krankenhaus
-Höhle,"51.3276141,7.8527007",2154,181,161,2024-02-14T05:00:02.158288000,"Höhle → 51.3276141,7.8527007","51.3276141,7.8527007 ↔ Höhle"
+Höhle,Krumpaul,2154,181,161,2024-02-14T05:00:02.158288000,Höhle → Krumpaul,Höhle ↔ Krumpaul
 Krumpaul,Höhle,2174,184,168,2024-02-13T21:50:01.867769000,Krumpaul → Höhle,Höhle ↔ Krumpaul
 Krumpaul,Krankenhaus,1539,147,137,2024-02-13T21:50:01.867769000,Krumpaul → Krankenhaus,Krankenhaus ↔ Krumpaul
 Krankenhaus,Höhle,1902,175,157,2024-02-13T21:50:01.708322000,Krankenhaus → Höhle,Höhle ↔ Krankenhaus
@@ -6783,7 +6789,7 @@ Krumpaul,Höhle,2174,184,166,2024-02-13T06:00:01.888337000,Krumpaul → Höhle,H
 Krumpaul,Krankenhaus,1539,147,140,2024-02-13T06:00:01.888337000,Krumpaul → Krankenhaus,Krankenhaus ↔ Krumpaul
 Krankenhaus,Höhle,1902,175,155,2024-02-13T06:00:01.394962000,Krankenhaus → Höhle,Höhle ↔ Krankenhaus
 Krankenhaus,Krumpaul,1560,144,136,2024-02-13T06:00:01.394962000,Krankenhaus → Krumpaul,Krankenhaus ↔ Krumpaul
-Höhle,"51.3269218,7.8675944",1905,184,180,2024-02-13T06:00:01.182424000,"Höhle → 51.3269218,7.8675944","51.3269218,7.8675944 ↔ Höhle"
+Höhle,Krankenhaus,1905,184,180,2024-02-13T06:00:01.182424000,Höhle → Krankenhaus,Höhle ↔ Krankenhaus
 Höhle,Krumpaul,2154,181,179,2024-02-13T06:00:01.182424000,Höhle → Krumpaul,Höhle ↔ Krumpaul
 Krumpaul,Höhle,2174,184,167,2024-02-13T05:30:01.632639000,Krumpaul → Höhle,Höhle ↔ Krumpaul
 Krumpaul,Krankenhaus,1539,147,144,2024-02-13T05:30:01.632639000,Krumpaul → Krankenhaus,Krankenhaus ↔ Krumpaul
