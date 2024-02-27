@@ -1,4 +1,10 @@
 from,to,distance_m,duration_s,duration_in_traffic_s,datetime,from_to,route
+Krumpaul,"Helle 11, 58802 Balve-Helle, Germany",2174,184,165,2024-02-27T06:00:01.364538000,"Krumpaul → Helle 11, 58802 Balve-Helle, Germany","Helle 11, 58802 Balve-Helle, Germany ↔ Krumpaul"
+Krumpaul,Krankenhaus,1539,146,133,2024-02-27T06:00:01.364538000,Krumpaul → Krankenhaus,Krankenhaus ↔ Krumpaul
+Krankenhaus,"Helle 11, 58802 Balve-Helle, Germany",1902,176,156,2024-02-27T06:00:01.167151000,"Krankenhaus → Helle 11, 58802 Balve-Helle, Germany","Helle 11, 58802 Balve-Helle, Germany ↔ Krankenhaus"
+Krankenhaus,Krumpaul,1560,146,137,2024-02-27T06:00:01.167151000,Krankenhaus → Krumpaul,Krankenhaus ↔ Krumpaul
+"Helle 11, 58802 Balve-Helle, Germany",Krankenhaus,1905,182,167,2024-02-27T06:00:00.984267000,"Helle 11, 58802 Balve-Helle, Germany → Krankenhaus","Helle 11, 58802 Balve-Helle, Germany ↔ Krankenhaus"
+"Helle 11, 58802 Balve-Helle, Germany",Krumpaul,2154,181,174,2024-02-27T06:00:00.984267000,"Helle 11, 58802 Balve-Helle, Germany → Krumpaul","Helle 11, 58802 Balve-Helle, Germany ↔ Krumpaul"
 Krumpaul,"Helle 11, 58802 Balve-Helle, Germany",2174,184,162,2024-02-27T05:50:01.769947000,"Krumpaul → Helle 11, 58802 Balve-Helle, Germany","Helle 11, 58802 Balve-Helle, Germany ↔ Krumpaul"
 Krumpaul,Krankenhaus,1539,146,137,2024-02-27T05:50:01.769947000,Krumpaul → Krankenhaus,Krankenhaus ↔ Krumpaul
 Krankenhaus,"Helle 11, 58802 Balve-Helle, Germany",1902,176,151,2024-02-27T05:50:01.637814000,"Krankenhaus → Helle 11, 58802 Balve-Helle, Germany","Helle 11, 58802 Balve-Helle, Germany ↔ Krankenhaus"
