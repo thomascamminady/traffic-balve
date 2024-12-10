@@ -21,6 +21,7 @@ polars = "^1.17.1"
 altair = "^5.5.0"
 numpy = "^2.2.0"
 pandas = "^2.2.3"
+vegafusion = {extras = ["embed"], version = "^2.0.1"}
 
 
 [tool.poetry.group.dev.dependencies]
