@@ -7,8 +7,6 @@ authors = ["Thomas Camminady <0milieux_member@icloud.com>"]
 [tool.poetry.dependencies]
 python = ">=3.10,<3.12"
 googlemaps = "^4.10.0"
-polars = "^0.20.1"
-altair = "^5.2.0"
 pyarrow = "^14.0.2"
 vl-convert-python = "^1.2.0"
 pytz = "^2023.3.post1"
@@ -19,6 +17,10 @@ hvplot = "^0.9.1"
 jupyter-bokeh = "^3.0.7"
 scipy = "^1.11.4"
 prophet = "^1.1.5"
+polars = "^1.17.1"
+altair = "^5.5.0"
+numpy = "^2.2.0"
+pandas = "^2.2.3"
 
 
 [tool.poetry.group.dev.dependencies]
