@@ -60,7 +60,7 @@ if __name__ == "__main__":
         ) as file:
             json.dump(matrix, file)
 
-    df = create_df().sort("datetime", descending=True)
+    df = create_df().sort("datetime", descending=False)
     df.write_csv("data/summary.csv")
     df.to_pandas().to_csv("data/summary.csv.zip")
 
